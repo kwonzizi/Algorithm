@@ -8,11 +8,8 @@ class Solution {
         int aa = Integer.valueOf(str1+str2).intValue();
         int bb = Integer.valueOf(str2+str1).intValue();
         
-        if( aa > bb) {
-            answer = aa;
-            
-        }else if(aa == bb) {
-            answer = aa;
+        if(aa >= bb) {
+            answer = aa;  
         }else {
             answer = bb;
         }
