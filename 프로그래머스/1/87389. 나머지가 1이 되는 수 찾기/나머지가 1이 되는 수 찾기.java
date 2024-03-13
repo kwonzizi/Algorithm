@@ -4,15 +4,13 @@ class Solution {
     public int solution(int n) {
         int answer = 0;
         
-        ArrayList<Integer> pr = new ArrayList();
-        
         for(int i = 1; i < n; i++) {
-            if( n % i == 1) pr.add(i);
-        }
-        pr.sort(Comparator.naturalOrder()); 
+            if( n % i == 1) {
+               answer = i;  
+                break;
+            } 
             
-        answer = pr.get(0);
-       
+        }  
         
         return answer;
     }
