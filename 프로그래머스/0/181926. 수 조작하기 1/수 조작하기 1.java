@@ -5,7 +5,7 @@ class Solution {
         
         char[] spell = control.toCharArray();
         
-        for(int i = 0; i<spell.length; i++) {
+        for(int i = 0; i<spell.length; i++){// char spell : control.toCharArray()
             if(spell[i] == 'w') n++;
             else if(spell[i] == 's') n--;
             else if(spell[i] == 'd') n = n + 10;
