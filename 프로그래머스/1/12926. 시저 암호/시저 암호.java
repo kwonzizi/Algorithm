@@ -2,8 +2,7 @@ import java.util.*;
 class Solution {
     public String solution(String s, int n) {
         String answer = "";
-        
-        
+    
         char ch = 'a' ;
         char cH = 'A' ;
         List<Character> list1 = new ArrayList<>();
@@ -12,34 +11,26 @@ class Solution {
             list1.add(ch);
             list2.add(cH);
             ch++;
-            cH++;
-            
+            cH++;  
         }
         
         for(int i = 0; i < s.length(); i++) {
-            int ind = 0;
+             int ind = 0;
              int inD = 0;
             if(s.charAt(i) == ' ') {
                 answer += ' ';
-            }else {
-                 ind = list1.indexOf(s.charAt(i));
-
-                if(ind == -1) {
+            }else if (Character.isUpperCase(s.charAt(i))){
                     inD = list2.indexOf(s.charAt(i));
                     inD =  (inD + n) % list2.size() ;
                     answer += list2.get(inD);
-                }else {
+                }else if(Character.isLowerCase(s.charAt(i)) ){
+                 ind = list1.indexOf(s.charAt(i));
                     ind = (ind + n) % list1.size();
                     answer += list1.get(ind);
                 }
-            }
-           
 
         }
-        
-        
-       
-       
+    
         return answer;
     }
 }
