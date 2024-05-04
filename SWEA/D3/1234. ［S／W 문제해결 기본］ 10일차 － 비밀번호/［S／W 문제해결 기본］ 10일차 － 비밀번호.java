@@ -24,8 +24,6 @@ class Solution
                 list.add(a);
               }
             int j = 0;
-            int cnt = 0;
-          
             while(j < list.size()-1) {
                 int y = 0;
               if(j>=0 && list.get(j) == list.get(j+1)) {
@@ -34,12 +32,9 @@ class Solution
                       y++;
                   }
            		   j--;
-              }else {
-                 
+              }else        
                    j++;
-                
-             }
-                 
+
             }
            
             for(int i = 0; i < list.size(); i++) {
